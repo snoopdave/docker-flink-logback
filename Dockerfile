@@ -1,6 +1,6 @@
 ARG FLINK_TAG=latest
 FROM flink:${FLINK_TAG}
-ENV LOGBACK_VERSION=1.1.10
+ENV LOGBACK_VERSION=1.2.3
 RUN \
   SLF4J_VERSION=$(ls "$FLINK_HOME"/lib/slf4j-log4j12-*.jar | sed -e 's/^.*slf4j-log4j12-\(.*\)\.jar$/\1/') && \
   rm -f "$FLINK_HOME"/lib/log4j-*.jar "$FLINK_HOME"/slf4j-log4j12-*.jar && \
